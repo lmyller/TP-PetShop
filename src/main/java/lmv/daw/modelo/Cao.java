@@ -1,6 +1,8 @@
 package lmv.daw.modelo;
 
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -23,6 +25,38 @@ public class Cao {
 	@NotBlank(message = "O raça não pode ser vazio!")
 	private String raca;
 	
-	
+	@Enumerated(EnumType.STRING)
 	private PorteCao porte;
+
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+	public String getNome() {
+		return nome;
+	}
+
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+
+	public String getRaca() {
+		return raca;
+	}
+
+	public void setRaca(String raca) {
+		this.raca = raca;
+	}
+
+	public PorteCao getPorte() {
+		return porte;
+	}
+
+	public void setPorte(PorteCao porte) {
+		this.porte = porte;
+	}
 }

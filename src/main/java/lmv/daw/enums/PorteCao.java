@@ -11,7 +11,7 @@ public enum PorteCao {
 		this.porte = porte;
 	}
 
-	protected String getPorte() {
+	public String getPorte() {
 		return porte;
 	}
 }
